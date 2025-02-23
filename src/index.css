@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .input-field {
+    @apply outline-none p-2 border border-[#E4E4E7] w-full rounded-md focus:bg-white focus:text-main_color_darker;
+  }
+
+  .main-btn {
+    @apply w-full bg-main_color py-3 px-6 rounded-md text-white hover:bg-main_color_darker duration-300;
+  }
+
+  input[type="checkbox"] {
+    @apply w-5 h-5 accent-main_color inline-block align-middle;
+  }
+
+  ::-webkit-scrollbar {
+    @apply bg-transparent w-[10px];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-main_color_darker rounded-sm;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-white px-4 py-4 rounded-lg bg-main_color text-xl w-full cursor-pointer font-medium border-[#EAEAEA] border-[1px] duration-200 flex justify-center gap-5 items-center;
+  }
+
+  .miniTap {
+    @apply bg-[#E4E4E7] rounded-lg w-14 h-2;
+  }
+
+  .active {
+    @apply text-main_color_darker;
+  }
+
+  .selectTap {
+    @apply bg-main_color;
+  }
+}

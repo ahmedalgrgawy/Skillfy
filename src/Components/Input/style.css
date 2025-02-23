@@ -1,0 +1,48 @@
+input[type="radio"] {
+    -webkit-appearance: none;
+    /* Remove default appearance */
+    appearance: none;
+}
+
+input[type="radio"]::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: #fff;
+}
+
+input[type="radio"]:checked::before {
+    background-color: #703BF7;
+    border: 2px solid #703BF7;
+}
+
+.toggle-switch::before {
+    content: "\2715";
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    transition: 300ms;
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: #703BF7;
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+    content: "\2713";
+    position: absolute;
+    left: 36px;
+    color: #703BF7;
+}
